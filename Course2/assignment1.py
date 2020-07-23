@@ -18,7 +18,6 @@ def kosaraju(data: list):
     t = 0
     s = None
     ftime = dict()
-    # leader = dict()
     leader = list()
 
     def dfs(graph: dict, start: int, fill_leader=False, compute_time=False):
@@ -28,37 +27,10 @@ def kosaraju(data: list):
         nonlocal t
         nonlocal s
 
-        # stack = [start]
-
         explored.append(start)
         if fill_leader:
-            # leader[start] = s
             leader.append(s)
-            # print("oooooooo", leader)
-        
-        # while stack:
-        #     print("********")
-        #     print(stack)
-        #     print(explored)
-        #     node = stack[-1]
-        #     if node not in explored:
-        #         explored.append(node)
-        #     remove_from_stack = True
-        #     print("===")
-        #     for next_node in graph[node]:
-        #         print(next_node)
-        #         if next_node not in explored:
-        #             stack.append(next_node)
-        #             remove_from_stack = False
-        #             break
-        #     if remove_from_stack:
-        #         stack.pop()
-        #         if compute_time:
-        #             t -= 1
-        #             ftime[t] = node
-        #             print(ftime)
 
-        # return visited
         try:
             next_nodes = graph[start]
         except KeyError:
@@ -87,7 +59,7 @@ def kosaraju(data: list):
 
 if __name__ == '__main__':
     # Get clean input data
-    with open('SCC.txt', 'r') as f:
+    with open('test_case_1.5.txt', 'r') as f:
         data = f.readlines()
     data = [[int(a) for a in x.split(' ')[:-1]] for x in data]
 
