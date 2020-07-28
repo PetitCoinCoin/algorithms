@@ -10,3 +10,4 @@ Assignments for Coursera Algorithms Spezialisation
 ### Course 2 -- Graph Search, Shortest Paths, and Data Structures
 1. Implementation of Kosaraju's algorithm
 2. Implementation of Dijkstra's shortest path algorithm
+3. Median maintenance with Heap data structure
