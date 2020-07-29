@@ -11,3 +11,4 @@ Assignments for Coursera Algorithms Spezialisation
 1. Implementation of Kosaraju's algorithm
 2. Implementation of Dijkstra's shortest path algorithm
 3. Median maintenance with Heap data structure
+4. Solving of the 2-sum problem
