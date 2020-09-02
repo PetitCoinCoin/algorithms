@@ -12,3 +12,6 @@ Assignments for Coursera Algorithms Spezialisation
 2. Implementation of Dijkstra's shortest path algorithm
 3. Median maintenance with Heap data structure
 4. Solving of the 2-sum problem
+
+### Course 3 -- Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming
+1. Scheduling problems and Prim's MST Algorithm implementation
