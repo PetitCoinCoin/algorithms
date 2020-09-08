@@ -7,12 +7,12 @@ def update_parent(dict_parent: dict, newp: int):
 class Graph: 
   
     def __init__(self,vertices): 
-        self.V= vertices #No. of vertices 
-        self.graph = list() 
+        self.V = vertices #No. of vertices 
+        self.graph = list()
    
     # function to add an edge to graph 
     def addEdge(self,u,v,w): 
-        self.graph.append([u,v,w]) 
+        self.graph.append([u,v,w])
   
     # A utility function to find set of an element i 
     # (uses path compression technique) 
@@ -20,7 +20,6 @@ class Graph:
         if parent[i] == i: 
             return i 
         return self.find(parent, parent[i]) 
-
 
     # A function that does union of two sets of x and y 
     # (uses union by rank) 
