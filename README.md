@@ -19,3 +19,6 @@ Assignments for Coursera Algorithms Spezialisation
 3. Huffman's code and Maximum Weight Independent Set of a Path Graph
 4. Knapsack problem resolution
 
+### Course 4 -- Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
+1. Implementation of Johnson's algorithm: Bellman-Ford and Dijkstra included
+
