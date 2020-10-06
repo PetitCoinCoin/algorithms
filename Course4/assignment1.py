@@ -37,12 +37,12 @@ def reweighting(graph, weights: list):
 def dijkstra(graph, start: int):
     # Init
     distances = defaultdict(lambda : math.inf)
-    remaining = []
+    remaining = [(distances[v], v) for v in list(graph.nodes) if v != start]
+    heapq.heapify(remaining)
     for v in graph.successors(start):
+        remaining.remove((distances[v], v))
         distances[v] = graph[start][v]['weight']
-    for v in list(graph.nodes):
-        if v != start:
-            heapq.heappush(remaining, (distances[v], v))
+        heapq.heappush(remaining, (distances[v], v))
 
     # Main
     while len(remaining) > 0:
