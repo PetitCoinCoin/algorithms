@@ -22,4 +22,5 @@ Assignments for Coursera Algorithms Spezialisation
 ### Course 4 -- Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
 1. Implementation of Johnson's algorithm: Bellman-Ford and Dijkstra included
 2. Resolution of Traveling Salesman Problem (generic function - data specific resolution)
+3. Traveling Salesman Problem heuristic resolution
 
