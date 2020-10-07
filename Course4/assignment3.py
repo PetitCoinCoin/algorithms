@@ -1,6 +1,5 @@
 import time
 import re
-from collections import defaultdict
 import math
 import matplotlib.pyplot as plt
 
@@ -13,8 +12,7 @@ def euclidean_dist(x: tuple, y: tuple):
 
 def heuristic_tsp(data: list, n: int):
     # Init
-    visited = defaultdict(lambda: False)
-    visited[0] = True
+    remaining = list(range(1, n))
     path = [0]
     distance = 0
     city = 0
@@ -24,13 +22,11 @@ def heuristic_tsp(data: list, n: int):
     # Run
     while len(path) < n:
         new_city = heapq.heappop(neighbors)
-        while visited[new_city[1]]:
-            new_city = heapq.heappop(neighbors)
         distance = distance + new_city[0]
         path.append(new_city[1])
-        visited[new_city[1]] = True
+        remaining.remove(new_city[1])
         city = new_city[1]
-        neighbors =  [(euclidean_dist(data[city], data[i]), i) for i in range(1, n) if not visited[i]]
+        neighbors =  [(euclidean_dist(data[city], data[i]), i) for i in remaining]
         heapq.heapify(neighbors)
         
     distance = distance + (euclidean_dist(data[city], data[0]))
