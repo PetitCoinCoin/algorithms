@@ -23,4 +23,5 @@ Assignments for Coursera Algorithms Spezialisation
 1. Implementation of Johnson's algorithm: Bellman-Ford and Dijkstra included
 2. Resolution of Traveling Salesman Problem (generic function - data specific resolution)
 3. Traveling Salesman Problem heuristic resolution
+4. Use of SCC to resolve 2SAT problems
 
